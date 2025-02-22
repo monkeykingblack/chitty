@@ -12,6 +12,7 @@ import { ErrorPage } from './pages/error-page';
 import { HomePage } from './pages/home-page';
 import { LoginPage } from './pages/login-page';
 import { NewChatPage } from './pages/new-chat-page';
+import { NotFoundPage } from './pages/not-found-page';
 
 export const router = createBrowserRouter([
   {
@@ -52,5 +53,9 @@ export const router = createBrowserRouter([
         element: <LoginPage />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
   },
 ]);

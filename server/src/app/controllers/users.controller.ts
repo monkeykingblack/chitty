@@ -13,7 +13,7 @@ export const handleGetUserInfo = (req: Request, res: Response) => {
   const user = ChatRepository.getUsers().find((u) => u.id == userId);
 
   if (!user) {
-    return res.status(404).end();
+    return res.send(null);
   }
 
   return res.json(user);
