@@ -9,5 +9,8 @@ const router: Router = Router();
 router.use('/auth', authRouter);
 router.use('/users', usersRouter);
 router.use('/messages', messagesRouter);
+router.use('/heath', (req, res) => {
+  res.status(200).send('Ok');
+});
 
 export default router;
